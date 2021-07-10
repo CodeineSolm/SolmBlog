@@ -29,5 +29,10 @@ namespace SolmBlog.Domain.Entities
 
         [DataType(DataType.Time)]
         public DateTime AddedDate { get; set; }
+
+        public EntityBase()
+        {
+            AddedDate = DateTime.UtcNow;
+        }
     }
 }
