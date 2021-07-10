@@ -8,8 +8,8 @@ namespace SolmBlog.Services
 {
     public class Config
     {
-        public static string connectionString { get; set; }
-        public static string siteName { get; set; }
-        public static string contactMail { get; set; }
+        public static string ConnectionString { get; set; }
+        public static string SiteName { get; set; }
+        public static string ContactMail { get; set; }
     }
 }
