@@ -11,7 +11,7 @@ namespace SolmBlog.Domain.Entities
     {
         [Required]
         public Guid Id { get; set; }
-        [Display(Name = "Name")]
+        [Display(Name = "Title")]
         public virtual string Title { get; set; }
         [Display(Name = "Short description")]
         public virtual string Subtitle { get; set; }
