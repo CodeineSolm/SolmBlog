@@ -1,11 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using SolmBlog.Domain.Repositories.Abstract;
+using Microsoft.EntityFrameworkCore;
 using SolmBlog.Domain.Entities;
-using SolmBlog.Domain.Repositories.Abstract;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace SolmBlog.Domain.Repositories.EntityFramework
 {
@@ -21,6 +18,7 @@ namespace SolmBlog.Domain.Repositories.EntityFramework
         public void DeleteArticle(Guid id)
         {
             _context.Articles.Remove(new Article() { Id = id });
+            _context.SaveChanges();
         }
 
         public Article GetArticleByCodeWord(string codeWord)
