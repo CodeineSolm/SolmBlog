@@ -3,16 +3,12 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SolmBlog.Domain.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SolmBlog.Domain
 {
     public class AppDbContext : IdentityDbContext<IdentityUser>
     {
-        public DbSet<Article> Article { get; set; }
+        public DbSet<Article> Articles { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
